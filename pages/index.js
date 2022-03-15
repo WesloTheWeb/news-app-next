@@ -18,7 +18,6 @@ export default function Home() {
         <h1 className={appHeader}>
           Welcome to the News!
         </h1>
-        <span className={['centerText'].join('')}>Powered by NextJS</span>
       </header>
       <main>
         <p className={['centerText'].join('')}>
