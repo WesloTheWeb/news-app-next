@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    border: 1px solid $black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: $fontSize;
+    padding: .25rem .75rem;
+    margin: 0 .25rem;
+}
+
+.GeneralTag {
+    background-color: $GeneralTag;
+}
+
+.BusinessTag {
+    background-color: $BusinessTag;
+    color: $white;
+}
+
+.EntertainmentTag {
+    background-color: $EntertainmentTag;
+    color: $white;
+}
+
+.HealthTag {
+    background-color: $HealthTag;
+}
+
+.ScienceTag {
+    background-color: $ScienceTag;
+    color: $white;
+}
+
+.SportsTag {
+    background-color: $SportsTag;
+}
+
+.TechnologyTag {
+    background-color: $TechnologyTag;
+}

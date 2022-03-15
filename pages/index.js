@@ -1,8 +1,9 @@
 import Head from 'next/head'
 // import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import SearchBar from '../src/containers/SearchBar/SearchBar';
 import Footer from '../src/components/Footer/Footer';
+import NewsCard from '../src/components/NewsCard/NewsCard';
 
 const { appHeader } = styles;
 
@@ -25,6 +26,7 @@ export default function Home() {
           or enter into search field and relevant articles will come up.
         </p>
         <SearchBar />
+        <NewsCard />
       </main>
       <Footer />
     </div>
