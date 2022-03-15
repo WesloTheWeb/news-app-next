@@ -6,7 +6,7 @@ import PlaceHolder from '../../../public/images/PH-150.png';
 
 const { newsContainer, newsDesc } = classes;
 
-const NewsCard = ({ image }) => {
+const NewsCard = ({ image, description }) => {
     return (
         <section className={newsContainer}>
             <a href="#">
