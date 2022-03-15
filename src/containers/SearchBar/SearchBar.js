@@ -8,7 +8,6 @@ const SearchBar = ({ }) => {
         <form className={formContainer}>
             <input placeholder="Search article by words" />
         </form>
-
     );
 };
 

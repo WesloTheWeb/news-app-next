@@ -8,8 +8,14 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #300DAB;
+  font-weight: bold;
   text-decoration: none;
+}
+
+a:hover {
+  opacity: .8;
+  border-bottom: 1px solid #000;
 }
 
 * {

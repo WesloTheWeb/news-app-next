@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import SearchBar from '../src/components/SearchBar/SearchBar';
+import SearchBar from '../src/containers/SearchBar/SearchBar';
+import Footer from '../src/components/Footer/Footer';
 
 const { appHeader } = styles;
 
@@ -26,18 +27,7 @@ export default function Home() {
         </p>
         <SearchBar />
       </main>
-      <footer className={['centerText'].join('')}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };
