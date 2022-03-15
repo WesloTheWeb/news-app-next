@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss'
 import SearchBar from '../src/containers/SearchBar/SearchBar';
 import Footer from '../src/components/Footer/Footer';
 import NewsCard from '../src/components/NewsCard/NewsCard';
+import CategoryBar from '../src/containers/CategoryBar/CategoryBar';
 
 const { appHeader } = styles;
 
@@ -26,6 +27,7 @@ export default function Home() {
           or enter into search field and relevant articles will come up.
         </p>
         <SearchBar />
+        <CategoryBar />
         <NewsCard />
       </main>
       <Footer />
