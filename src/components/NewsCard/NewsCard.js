@@ -16,12 +16,11 @@ const NewsCard = ({ image, description }) => {
             <div className={newsDesc}>
                 <p>Description</p>
                 <a href="#">
-                    <Image src={PlaceHolder} placeholder="blur" alt="Vercel Logo" width={112} height={112} />
+                    <Image src={PlaceHolder} placeholder="blur" alt="news article" width={112} height={112} />
                 </a>
             </div>
         </section>
     );
 };
-
 
 export default NewsCard;

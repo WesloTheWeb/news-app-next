@@ -17,11 +17,14 @@ a {
   color: $linkTextColor;
   font-weight: bold;
   text-decoration: none;
-}
 
-a:hover {
-  opacity: .8;
-  border-bottom: 1px solid $black;
+  &:hover {
+    opacity: .8;
+  }
+
+  &:visited {
+    color: $linkTextColor;
+  }
 }
 
 * {

@@ -17,13 +17,18 @@
         font-size: $fontSize * 1.5;
 
         @media only screen and (max-width: 767px) {
-            font-size: $fontSize;
+            font-size: $fontSize *.75;
             width: 100%;
         }
     }    
 
     input:hover {
         box-shadow: $boxShadowColor;
+    }
+
+    input:focus {
+        border: 2px solid lightskyblue;
+        outline: lightskyblue;
     }
 
     button {

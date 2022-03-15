@@ -3,7 +3,7 @@ import classes from './NewsTag.module.scss';
 
 const { container, GeneralTag, BusinessTag, EntertainmentTag, HealthTag, ScienceTag, SportsTag, TechnologyTag } = classes;
 
-const NewsTag = ({tags}) => {
+const NewsTag = ({ tags }) => {
     return (
         <>
             <label className={[container, GeneralTag].join(' ')}>General</label>
