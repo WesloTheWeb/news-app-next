@@ -1,0 +1,16 @@
+.formContainer {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.formContainer input {
+    width: 50%;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.labelAlign {
+    display: block;
+    text-align: left;
+}
