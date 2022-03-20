@@ -15,7 +15,7 @@ const api = {
 
 export const getStaticProps = async () => {
 
-  const res = await fetch(`${api.baseUrl}?access_key=${api.apiKey}`);
+  const res = await fetch(`${api.baseUrl}?access_key=${api.apiKey}&countries=us`);
   const data = await res.json();
 
   return {
@@ -26,6 +26,8 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ articles }) {
+
+  console.log(articles)
 
   return (
     <div className={styles.container}>
@@ -51,9 +53,10 @@ export default function Home({ articles }) {
             <NewsCard
               key={id}
               article={news.title}
+              articleURL={news.url}
               image={news.image}
               description={news.description}
-            />
+              tags={news.category} />
           )
         })
         }
