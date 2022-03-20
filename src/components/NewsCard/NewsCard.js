@@ -2,21 +2,25 @@ import React from 'react';
 import classes from './NewsCard.module.scss';
 import Image from 'next/image';
 import NewsTag from '../NewsTag/NewsTag';
-import PlaceHolder from '../../../public/images/PH-150.png';
+import PlaceHolder from '../../../public/images/news-placeholder.png';
+// import { newsPlaceholder } from '../../../public/images/index';
 
 const { newsContainer, newsDesc } = classes;
 
-const NewsCard = ({ image, description }) => {
+const NewsCard = ({ article, image, description }) => {
     return (
         <section className={newsContainer}>
             <a href="#">
-                <h3>Article Name</h3>
+                <h3>{article}</h3>
             </a>
             <NewsTag />
             <div className={newsDesc}>
-                <p>Description</p>
+                <p>{description}</p>
                 <a href="#">
-                    <Image src={PlaceHolder} placeholder="blur" alt="news article" width={112} height={112} />
+                    {
+                        image ? <img src={image} alt="news article" width={170} height={130} /> : 
+                        <img src={PlaceHolder} alt="image pending" width={170} height={130} />
+                    }
                 </a>
             </div>
         </section>
