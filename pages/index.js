@@ -48,20 +48,36 @@ export default function Home({ articles }) {
         </p>
         <SearchBar />
         <CategoryBar />
-        {articles.data?.map((news, id) => {
-          return (
-            <NewsCard
-              key={id}
-              article={news.title}
-              articleURL={news.url}
-              image={news.image}
-              description={news.description}
-              tags={news.category} />
-          )
-        })
+        {
+          articles.data?.filter(article => article.category === 'general')
+            .map((news, id) => {
+            return (
+              <NewsCard
+                key={id}
+                article={news.title}
+                articleURL={news.url}
+                image={news.image}
+                description={news.description}
+                tags={news.category} />
+            )
+          })
         }
       </main>
       <Footer />
     </div>
   );
 };
+
+// {
+//   articles.data?.map((news, id) => {
+//     return (
+//       <NewsCard
+//         key={id}
+//         article={news.title}
+//         articleURL={news.url}
+//         image={news.image}
+//         description={news.description}
+//         tags={news.category} />
+//     )
+//   })
+// }
