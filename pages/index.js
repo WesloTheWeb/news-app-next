@@ -8,7 +8,27 @@ import CategoryBar from '../src/containers/CategoryBar/CategoryBar';
 
 const { appHeader } = styles;
 
-export default function Home() {
+const api = {
+  apiKey: process.env.REACT_MEDIA_KEY,
+  baseUrl: `http://api.mediastack.com/v1/news`
+};
+
+export const getStaticProps = async () => {
+
+  const res = await fetch(`${api.baseUrl}?access_key=${api.apiKey}&countries=us`);
+  const data = await res.json();
+
+  return {
+    props: {
+      articles: data
+    },
+  };
+};
+
+export default function Home({ articles }) {
+
+  console.log(articles)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,9 +48,36 @@ export default function Home() {
         </p>
         <SearchBar />
         <CategoryBar />
-        <NewsCard />
+        {
+          articles.data?.filter(article => article.category === 'general')
+            .map((news, id) => {
+            return (
+              <NewsCard
+                key={id}
+                article={news.title}
+                articleURL={news.url}
+                image={news.image}
+                description={news.description}
+                tags={news.category} />
+            )
+          })
+        }
       </main>
       <Footer />
     </div>
   );
 };
+
+// {
+//   articles.data?.map((news, id) => {
+//     return (
+//       <NewsCard
+//         key={id}
+//         article={news.title}
+//         articleURL={news.url}
+//         image={news.image}
+//         description={news.description}
+//         tags={news.category} />
+//     )
+//   })
+// }
